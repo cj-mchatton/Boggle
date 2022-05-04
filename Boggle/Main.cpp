@@ -8,7 +8,20 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Initialize 2D array
+    char colour[16][10] = {
+        "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
+        "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
+        "DISTTY", "EEGHNW", "EEINSU", "EHRTVW",
+        "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
+    };
+
+    // Printing Strings stored in 2D array
+    for (int i = 0; i < 16; i++)
+        std::cout << colour[i][0] << "\n";
+
+    return 0;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
