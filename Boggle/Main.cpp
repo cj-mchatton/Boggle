@@ -8,6 +8,8 @@ using namespace std;
 // math
 
 
+
+///----This file will not exist. Main is the boggle words.cpp file (i think)----///////
 int main()
 {
     // Initialize 2D array
@@ -18,7 +20,7 @@ int main()
         "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
     };
     
-    char boggleBoard[16];
+    string boggleBoard[16]; //changed to a string from char.
 
     srand(time(0));
 
@@ -26,23 +28,14 @@ int main()
     for (int i = 0; i < 16; i++)
     {
         boggleBoard[i] = lettersToPickFrom[i][rand() % 6];
-        //std::cout << lettersToPickFrom[i][rand() % 6] << "\n";
     }
 
+    //cout << boggleBoard[2] << "\n";
     for (int i = 0; i < 16; i++)
     {
-        std::cout << boggleBoard[i]<< "\n";
+        //std::cout << boggleBoard[i]<< "\n";
+        cout << boggleBoard[i] << "\n";
     }
+    
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

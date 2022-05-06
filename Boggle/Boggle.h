@@ -1,24 +1,22 @@
-//#ifndef BOGGLE_H
-//#define BOGGLE_H
-//
-//#pragma once
-//#include <iostream>
-//#include <fstream>
-//
-//using namespace std;
-//
-//class Boggle
-//{
-//	//This constructor initializes the Boggle board to use the given dictionary 
-//	//lexicon to look up words and use the given 16-letter string to initialize
-//	//the 16 board cubes from top-left to bottom-right. If the string is empty,
-//	//generate a random shuffled board. This method is case-insensitive; 
-//	//it accepts the board text whether it is passed in upper, lower, or mixed case.
-//	//This constructor is considered the parameterized constructor.
-//	Boggle(fstream lexicon, string boardText);
-//
-//
-//
+#ifndef BOGGLE_H
+#define BOGGLE_H
+
+#pragma once
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+class Boggle
+{
+	//This constructor initializes the Boggle board to use the given dictionary 
+	//lexicon to look up words and use the given 16-letter string to initialize
+	//the 16 board cubes from top-left to bottom-right. If the string is empty,
+	//generate a random shuffled board. This method is case-insensitive; 
+	//it accepts the board text whether it is passed in upper, lower, or mixed case.
+	//This constructor is considered the parameterized constructor.
+	Boggle(fstream lexicon, string boardText);
+
 //	//This method returns the character that is stored in the Boggle board at 
 //	//the given 0 - based row and column.If the row and /or column are out 
 //	//of bounds, throw an exception.
@@ -72,6 +70,6 @@
 //	//of text. It should print the board text in all uppercase.
 //	ostream& operator<< (ostream& stream);
 //
-//};
-//
-//#endif
+};
+
+#endif
