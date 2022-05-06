@@ -5,23 +5,35 @@
 #include "Boggle.h"
 
 using namespace std;
+// math
+
 
 int main()
 {
     // Initialize 2D array
-    char colour[16][10] = {
+    char lettersToPickFrom[16][7] = {
         "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
         "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
         "DISTTY", "EEGHNW", "EEINSU", "EHRTVW",
         "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
     };
+    
+    char boggleBoard[16];
+
+    srand(time(0));
 
     // Printing Strings stored in 2D array
     for (int i = 0; i < 16; i++)
-        std::cout << colour[i][0] << "\n";
+    {
+        boggleBoard[i] = lettersToPickFrom[i][rand() % 6];
+        //std::cout << lettersToPickFrom[i][rand() % 6] << "\n";
+    }
 
+    for (int i = 0; i < 16; i++)
+    {
+        std::cout << boggleBoard[i]<< "\n";
+    }
     return 0;
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
