@@ -9,19 +9,27 @@ using namespace std;
 
 
 
-///----This file will not exist. Main is the boggle words.cpp file (i think)----///////
+///----This file will not exist. Main is the BoggleWords.cpp file (i think)----///////
 int main()
 {
-    // Initialize 2D array
+
+    //check string boardText for length.
+    //if (boardText.length() != 16)
+    //{
+    //    cout << "error";
+    //}
+    
+    //string uniqueBoggleBoard;
+    //string lexiconWordDictionary;
+
     char lettersToPickFrom[16][7] = {
         "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
         "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
         "DISTTY", "EEGHNW", "EEINSU", "EHRTVW",
         "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
     };
-    
-    string boggleBoard[16]; //changed to a string from char.
 
+    string boggleBoard[16]; //changed to a string from char.
     srand(time(0));
 
     // Printing Strings stored in 2D array

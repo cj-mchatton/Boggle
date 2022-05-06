@@ -12,40 +12,43 @@ Boggle::Boggle(fstream lexicon, string boardText)
     // with the file name and in the constructor I also 
     // created a dictionary that is holding all of the words 
     // in the text file"
-    
-    //Lexicon = word dictionary
-    //string boardText
 
-    //check string boardText for length.
-    if (boardText.length() != 16)
-    {
-        cout << "error";
-    }
-    
-    char lettersToPickFrom[16][7] = {
-        "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
-        "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
-        "DISTTY", "EEGHNW", "EEINSU", "EHRTVW",
-        "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
-    };
+    ////check string boardText for length.
+    //if (boardText.length() != 16)
+    //{
+    //    cout << "error";
+    //}
+    //
+    ////string uniqueBoggleBoard;
+    ////string lexiconWordDictionary;
 
-    string boggleBoard[16]; //changed to a string from char.
-    srand(time(0));
 
-    // Printing Strings stored in 2D array
-    for (int i = 0; i < 16; i++)
-    {
-        boggleBoard[i] = lettersToPickFrom[i][rand() % 6];
-    }
+    //char lettersToPickFrom[16][7] = {
+    //    "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
+    //    "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
+    //    "DISTTY", "EEGHNW", "EEINSU", "EHRTVW",
+    //    "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
+    //};
 
-    //cout << boggleBoard[2] << "\n";
-    for (int i = 0; i < 16; i++)
-    {
-        //std::cout << boggleBoard[i]<< "\n";
-        cout << boggleBoard[i] << "\n";
-    }
+    //string boggleBoard[16]; //changed to a string from char.
+    //srand(time(0));
+
+    //// Printing Strings stored in 2D array
+    //for (int i = 0; i < 16; i++)
+    //{
+    //    boggleBoard[i] = lettersToPickFrom[i][rand() % 6];
+    //}
+
+    ////cout << boggleBoard[2] << "\n";
+    //for (int i = 0; i < 16; i++)
+    //{
+    //    //std::cout << boggleBoard[i]<< "\n";
+    //    cout << boggleBoard[i] << "\n";
+    //}
 }
 
+
+//--------This is just some reminders for how to work with strings----------//
 //Accessing individual characters. Using square brackets, you can access individual
 //characters within a string as if it’s a char array.Positions within a string str are
 //numbered from 0 through str.length() - 1. You can read and write to characters
