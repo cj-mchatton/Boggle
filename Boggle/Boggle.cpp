@@ -1,17 +1,40 @@
 #include <string>
 #include <iostream>
 #include "Boggle.h"
+#include <fstream>
 using namespace std;
+
+
+
 
 
 Boggle::Boggle(fstream lexicon, string boardText) 
 {
+    //string uniqueBoggleBoard = boardText;
+    //string lexiconWordDictionary = lexicon;
+
     //Tyler said:
     // "For the fstream _lexicon, I couldn't get it to work 
     // using an fstream variable. I instead passed a string 
     // with the file name and in the constructor I also 
     // created a dictionary that is holding all of the words 
     // in the text file"
+    
+    //using fstream for boggle ctor
+    //std::fstream myFile; myFile.open("boggle.txt");
+    //std::string myString;
+    //if (myFile.is_open()) { // always check whether the file is open
+    //    myFile >> myString; // pipe file's content into stream
+    //    std::cout << myString; // pipe stream's content to standard output
+    //}
+    //
+    //if (myFile.is_open()) {
+    //    while (myFile.good()) {
+    //        myFile >> myString;
+    //        std::cout << myString;
+    //    }
+    //}
+
 
     ////check string boardText for length.
     //if (boardText.length() != 16)
@@ -19,8 +42,7 @@ Boggle::Boggle(fstream lexicon, string boardText)
     //    cout << "error";
     //}
     //
-    ////string uniqueBoggleBoard;
-    ////string lexiconWordDictionary;
+    
 
 
     //char lettersToPickFrom[16][7] = {

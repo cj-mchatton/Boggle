@@ -21,7 +21,7 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\CST136BoggleWords.cpp">
+    <ClCompile Include="CST136BoggleWords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
