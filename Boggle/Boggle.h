@@ -11,8 +11,11 @@ class Boggle
 {
 	//should we have some variables here? like the lexicon and boardText? 
 	//So when we create a board they are sotored here?
-	string uniqueBoggleBoard;
+	string uniqueBoggleBoard[16];
 	string lexiconWordDictionary;
+
+	//Ive added this with no parameters to be able to work on it.
+	Boggle();
 
 	//This constructor initializes the Boggle board to use the given dictionary 
 	//lexicon to look up words and use the given 16-letter string to initialize
@@ -20,7 +23,7 @@ class Boggle
 	//generate a random shuffled board. This method is case-insensitive; 
 	//it accepts the board text whether it is passed in upper, lower, or mixed case.
 	//This constructor is considered the parameterized constructor.
-	Boggle(fstream lexicon, string boardText);
+	//Boggle(string lexicon, string boardText);
 
 //	//This method returns the character that is stored in the Boggle board at 
 //	//the given 0 - based row and column.If the row and /or column are out 
