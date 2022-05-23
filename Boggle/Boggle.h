@@ -14,6 +14,10 @@ class Boggle
 	string uniqueBoggleBoard[16];
 	string lexiconWordDictionary;
 
+	//probably only need one of these.
+	int foundWords;// length?
+	int score;//
+
 	//Ive added this with no parameters to be able to work on it.
 	Boggle();
 

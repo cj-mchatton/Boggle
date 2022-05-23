@@ -77,6 +77,7 @@ Boggle::Boggle()
 //{
 //}
 
+//cameron
 //bool Boggle:: b.checkWord(string word)
 //{
 //}
@@ -86,7 +87,7 @@ Boggle::Boggle()
 //
 //}
 
-//
+//cameron
 //string* Boggle:: b.computerWordSearch()
 //{
 //}
@@ -95,10 +96,12 @@ Boggle::Boggle()
 //{
 //}
 
+//cameron
 //int b.getScoreComputer()
 //{
 //}
 
+//cameron
 //ostream& operator<< (ostream& stream)
 //{
 //}
