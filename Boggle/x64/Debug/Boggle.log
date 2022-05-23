@@ -1,3 +1,1 @@
-﻿  Boggle.cpp
-C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(42,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Boggle.vcxproj -> C:\Users\Logan\Documents\GitHub\Boggle\x64\Debug\Boggle.exe
+﻿  Boggle.vcxproj -> C:\Users\Logan\Documents\GitHub\Boggle\x64\Debug\Boggle.exe
