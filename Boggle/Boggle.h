@@ -12,7 +12,8 @@ class Boggle
 	//should we have some variables here? like the lexicon and boardText? 
 	//So when we create a board they are sotored here?
 	string uniqueBoggleBoard[16];
-	string lexiconWordDictionary;
+	string* storedLexicon = new string[83000];
+
 
 	//probably only need one of these.
 	int foundWords = 0;// length?
@@ -22,6 +23,10 @@ public:
 	//Ive added this with no parameters to be able to work on it.
 	Boggle();
 
+	~Boggle() 
+	{
+		delete[] storedLexicon;
+	}
 	//This constructor initializes the Boggle board to use the given dictionary 
 	//lexicon to look up words and use the given 16-letter string to initialize
 	//the 16 board cubes from top-left to bottom-right. If the string is empty,

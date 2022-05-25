@@ -17,25 +17,22 @@ Boggle::Boggle()
     inFile.open("boggle.txt", ios::in);
 
     //int numberOfWords = 1;
-    string storedLexicon[83000];
+    //string storedLexicon[83000];
 
     if (inFile.is_open())
     {
         int i = 0;
         while (getline(inFile, inString))
         { 
-            //cout << inString << endl;
+            cout << inString << endl;
             storedLexicon[i] = inString;
             i++;
         }
         inFile.close();
     }
-    //cout << numberOfWords << endl; //testing
     
-    
-    
-    
-    
+    cout << storedLexicon << endl; //testing
+
     ///----Section one: using fstream------///
     //using fstream for boggle ctor to access the lexicon (dictionary of usable words)
     //std::fstream myFile; myFile.open("boggle.txt");
