@@ -14,9 +14,8 @@ class Boggle
 	string uniqueBoggleBoard[16];
 	string* storedLexicon = new string[83000];
 
-
 	//probably only need one of these.
-	int foundWords = 0;// length?
+	//int foundWords = 0;// length?
 	int score = 0 ;//
 
 public:

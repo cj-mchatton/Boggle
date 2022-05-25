@@ -24,33 +24,14 @@ Boggle::Boggle()
         int i = 0;
         while (getline(inFile, inString))
         { 
-            cout << inString << endl;
+            //cout << inString << endl;
             storedLexicon[i] = inString;
             i++;
         }
         inFile.close();
     }
     
-    cout << storedLexicon << endl; //testing
-
-    ///----Section one: using fstream------///
-    //using fstream for boggle ctor to access the lexicon (dictionary of usable words)
-    //std::fstream myFile; myFile.open("boggle.txt");
-    //std::string myString;
-    //if (myFile.is_open()) { // always check whether the file is open
-    //    myFile >> myString; // pipe file's content into stream
-    //    std::cout << myString; // pipe stream's content to standard output
-    //      size++
-    // 
-    // 
-    //}
-    ////prints out the whole lexicon. We wont ever need this, this is just for testing.
-    //if (myFile.is_open()) {
-    //    while (myFile.good()) {
-    //        myFile >> myString;
-    //        std::cout << myString;
-    //    }
-    //}
+    //cout << storedLexicon << endl; //testing
 
     ///----Section Two: ------///
     //this is given in the boggle document, when making 
@@ -76,10 +57,17 @@ Boggle::Boggle()
     for (int i = 0; i < 16; i++){
         BoggleBoard[i] = lettersToPickFrom[i][rand() % 6];}
 
-    //print out the boggle board here, no fancy formatting.
-    for (int i = 0; i < 16; i++){   
+    //print out the boggle board here
+    for (int i = 0; i < 16; i++) {
+        cout << BoggleBoard[i];
+        i++;
+        cout << BoggleBoard[i];
+        i++;
+        cout << BoggleBoard[i];
+        i++;
         cout << BoggleBoard[i] << "\n";
     }
+
 
     ////store the new boggle board in our boggle class.
     //uniqueBoggleBoard = BoggleBoard;
@@ -102,6 +90,7 @@ Boggle::Boggle()
 //str1.replace(start, length, str2);
 //https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/handouts/08-C++-Strings.pdf
 
+//logan
 //char Boggle:: b.getLetter(int row, int col)
 //{
 //}
@@ -109,11 +98,22 @@ Boggle::Boggle()
 //cameron
 //bool Boggle:: b.checkWord(string word)
 //{
+// //check word:
+// 
+// // if word exists...
+// 
+// score = str.length - 4 // 1 point for 5 letter word, 2 points for 6 letters etc.
+// 
 //}
 
+
+//logan
 //bool Boggle:: b.humanWordSearch(string word)
 //{
 //
+// // if word exists...
+// 
+// score = str.length - 4
 //}
 
 //cameron
@@ -121,6 +121,7 @@ Boggle::Boggle()
 //{
 //}
 
+//logan
 //int Boggle:: b.getScoreHuman()
 //{
 //}
@@ -133,4 +134,15 @@ Boggle::Boggle()
 //cameron
 //ostream& operator<< (ostream& stream)
 //{
+//}
+
+///This is the code to print out a formatted boggle board.
+//for (int i = 0; i < 16; i++) {
+//    cout << BoggleBoard[i];
+//    i++;
+//    cout << BoggleBoard[i];
+//    i++;
+//    cout << BoggleBoard[i];
+//    i++;
+//    cout << BoggleBoard[i] << "\n";
 //}
