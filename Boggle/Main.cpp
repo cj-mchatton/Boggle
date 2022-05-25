@@ -11,6 +11,6 @@ using namespace std;
 int main()
 {
     // as of right now I have a Boggle Ctor with no parameters, it creates a board.
-    Boggle b1();
+    Boggle b1;
     return 0;
 }

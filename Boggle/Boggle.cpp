@@ -1,12 +1,41 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "Boggle.h"
-#include <fstream>
+
+using std::string;
+using std::ios;
+using std::fstream;
+using std::cout;
+using std::endl;
 using namespace std;
 
 Boggle::Boggle()
 {
+    string inString;
+    fstream inFile;
+    inFile.open("boggle.txt", ios::in);
 
+    //int numberOfWords = 1;
+    string storedLexicon[83000];
+
+    if (inFile.is_open())
+    {
+        int i = 0;
+        while (getline(inFile, inString))
+        { 
+            //cout << inString << endl;
+            storedLexicon[i] = inString;
+            i++;
+        }
+        inFile.close();
+    }
+    //cout << numberOfWords << endl; //testing
+    
+    
+    
+    
+    
     ///----Section one: using fstream------///
     //using fstream for boggle ctor to access the lexicon (dictionary of usable words)
     //std::fstream myFile; myFile.open("boggle.txt");
@@ -14,6 +43,9 @@ Boggle::Boggle()
     //if (myFile.is_open()) { // always check whether the file is open
     //    myFile >> myString; // pipe file's content into stream
     //    std::cout << myString; // pipe stream's content to standard output
+    //      size++
+    // 
+    // 
     //}
     ////prints out the whole lexicon. We wont ever need this, this is just for testing.
     //if (myFile.is_open()) {
