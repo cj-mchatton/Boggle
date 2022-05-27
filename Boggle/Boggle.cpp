@@ -12,6 +12,7 @@ using namespace std;
 
 Boggle::Boggle()
 {
+    ///----Section One: IO stuff ------///
     string inString;
     fstream inFile;
     inFile.open("boggle.txt", ios::in);
@@ -30,7 +31,6 @@ Boggle::Boggle()
         }
         inFile.close();
     }
-    
     //cout << storedLexicon << endl; //testing
 
     ///----Section Two: ------///
@@ -46,7 +46,7 @@ Boggle::Boggle()
     string BoggleBoard[16]; //changed to a string from char.
     srand(time(0));
 
-    ///----Section Create a unique board if one isnt given: ------///
+    ///----Section Three: Create a unique board if one isnt given ------///
     //check string boardText for length. boardText will be a give parameter, 
     //if (boardText.length() != 16)
     //{
@@ -75,10 +75,7 @@ Boggle::Boggle()
     string lexiconWordDictionary;
 }
 
-
 //Boggle::Boggle(string lexicon, string boardText) {}
-
-
 
 //--------This is just some reminders for how to work with strings----------//
 //Accessing individual characters. Using square brackets, you can access individual
@@ -108,13 +105,15 @@ Boggle::Boggle()
 
 
 //logan
-//bool Boggle:: b.humanWordSearch(string word)
+bool Boggle:: b.humanWordSearch(string word)
 //{
-//
-// // if word exists...
+//if word exists...
+//score = str.length - 4
 // 
-// score = str.length - 4
-//}
+// 
+// 
+// 
+}
 
 //cameron
 //string* Boggle:: b.computerWordSearch()
@@ -145,4 +144,54 @@ Boggle::Boggle()
 //    cout << BoggleBoard[i];
 //    i++;
 //    cout << BoggleBoard[i] << "\n";
+//}
+
+
+
+///---------THis is for recursive search---------///
+//bool exist(vector<vector<char>>& board, string word) {
+//    if (word.empty() or board.empty())
+//        return false;
+//    bool foundMatch = false;
+//
+//    for (int i = 0; i < board.size(); i++)
+//        for (int j = 0; j < board[0].size(); j++)
+//        {
+//            if (board[i][j] == s[0]) // hit first letter
+//                searchWord(word, {}, board, 0, i, j, foundMatch);
+//
+//            if (foundMatch)
+//                return foundMatch;
+//        }
+//    return foundMatch;
+//}
+//
+//void searchWord(const string& word,
+//    string currentWord,
+//    vector<vector<char>>& board,
+//    int index,
+//    int i,
+//    int j,
+//    bool& foundMatch)
+//{
+//    if (currentWord.size() == word.size())
+//    {
+//        foundMatch = true;
+//        return;
+//    }
+//
+//    if (i < 0 or y < 0 or i >= board.size() or j >= board[0].size() or 
+//        board[i][j] != word[index] or foundMatch)
+//        return;
+//
+//    currentWord += word[index];
+//    char temp = board[i][j];
+//    board[i][j] = ' ';
+//    
+//    searchWord(word, currentWord, board, index+1, i+1, j, foundMatch);
+//    searchWord(word, currentWord, board, index+1, i-1, j, foundMatch);
+//    searchWord(word, currentWord, board, index+1, i, j+1, foundMatch);
+//    searchWord(word, currentWord, board, index+1, i, j-1, foundMatch);
+//
+//    board[i][j] = temp;
 //}

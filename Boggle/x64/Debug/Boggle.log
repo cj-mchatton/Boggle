@@ -1,3 +1,7 @@
 ﻿  Boggle.cpp
 C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(47,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Boggle.vcxproj -> C:\Users\Logan\Documents\GitHub\Boggle\x64\Debug\Boggle.exe
+C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(114,13): error C2065: 'vector': undeclared identifier
+C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(114,20): error C2065: 'vector': undeclared identifier
+C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(114,27): error C2062: type 'char' unexpected
+C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(114,54): error C2143: syntax error: missing ';' before '{'
+C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(114,54): error C2447: '{': missing function header (old-style formal list?)
