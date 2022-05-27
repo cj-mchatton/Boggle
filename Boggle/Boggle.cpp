@@ -105,7 +105,7 @@ Boggle::Boggle()
 
 
 //logan
-bool Boggle:: b.humanWordSearch(string word)
+//bool Boggle:: b.humanWordSearch(string word)
 //{
 //if word exists...
 //score = str.length - 4
@@ -113,7 +113,7 @@ bool Boggle:: b.humanWordSearch(string word)
 // 
 // 
 // 
-}
+//}
 
 //cameron
 //string* Boggle:: b.computerWordSearch()
