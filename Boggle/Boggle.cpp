@@ -38,10 +38,10 @@ Boggle::Boggle()
         "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
     };
 
-    char BoggleBoard[4][4]; //changed to a string from char.
+    //char BoggleBoard[4][4]; //changed to a string from char.
     srand(time(0));
 
-    //check string boardText for length. boardText will be a give parameter, 
+    //check string boardText for length. boardText will be a given parameter, 
     //if (boardText.length() != 16)
     //{
     //    cout << "error";
@@ -51,30 +51,14 @@ Boggle::Boggle()
     // creating a unique boggle board from the available letters to play on
     /*for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
-            BoggleBoard[i][j] = lettersToPickFrom[i][rand() % 6];
+            uniqueBoggleBoard[i][j] = lettersToPickFrom[i][rand() % 6];
         }
     }*/
-
-    //testing only, delete:
-    char lettersToPickFrom2[16][2] = {
-        "A", "A", "A", "A",
-        "A", "C", "D", "D",
-        "D", "E", "E", "E",
-        "E", "E", "I", "H"
-    };
-
-    ///--set up static board for testing--///
-    // creating a unique boggle board from the available letters to play on
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            BoggleBoard[i][j] = lettersToPickFrom2[1][1];
-        }
-    }
 
     //print out the boggle board here
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
-            cout << BoggleBoard[i][j] << endl << endl ;
+            cout << uniqueBoggleBoard[i][j] << endl << endl ;
         }
     }
 
@@ -96,7 +80,7 @@ Boggle::Boggle()
 //https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/handouts/08-C++-Strings.pdf
 
 
-//char Boggle:: getLetter(int row, int col)
+//char Boggle::getLetter(int row, int col)
 //{
 //    cout << uniqueBoggleBoard[row][col];
 //    return uniqueBoggleBoard[row][col];
@@ -117,10 +101,12 @@ Boggle::Boggle()
 //Logan
 bool Boggle:: humanWordSearch(string word)
 {
- exist(uniqueBoggleBoard, word);
+    return exist(uniqueBoggleBoard, word);
+
  //update score here 
  //1 point for 5 letter word, 2 points for 6 letters etc.
  //score = str.length - 4;
+    //return true;
 }
 
 //Cameron
@@ -175,7 +161,7 @@ void searchWord(const string& word,
 }
 
 //recursive search, used in humanWordSearch and computerWordSearch
-bool exist(char board[4][4], string word) {
+bool Boggle::exist(char board[4][4], string word) {
     // I can have a class method to ensure that the board has been initialized
     if (word.empty()) //or uniqueBoggleBoard.empty())
         return false;

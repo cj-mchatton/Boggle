@@ -9,34 +9,30 @@ using namespace std;
 
 class Boggle
 {
-	//should we have some variables here? like the lexicon and boardText? 
-	//So when we create a board they are sotored here?
-	char uniqueBoggleBoard[4][4];
+
+	// temporary testing code, a static board, not randomly generated.
+	char uniqueBoggleBoard[4][4] = {
+		{'A', 'A', 'T', 'E'},
+		{'A', 'A', 'G', 'D'},
+		{'A', 'A', 'B', 'S'},
+		{'A', 'A', 'V', 'C'}
+	};
+
 	string* storedLexicon = new string[83000];
 
-	//probably only need one of these.
-	//int foundWords = 0;// length?
-	int score = 0 ;//
+	int score = 0 ;
 
 public:
-	//Ive added this with no parameters to be able to work on it.
 	Boggle();
 
 	~Boggle() 
 	{
 		delete[] storedLexicon;
 	}
-	//This constructor initializes the Boggle board to use the given dictionary 
-	//lexicon to look up words and use the given 16-letter string to initialize
-	//the 16 board cubes from top-left to bottom-right. If the string is empty,
-	//generate a random shuffled board. This method is case-insensitive; 
-	//it accepts the board text whether it is passed in upper, lower, or mixed case.
-	//This constructor is considered the parameterized constructor.
-	//Boggle(string lexicon, string boardText);
 
-//	//This method returns the character that is stored in the Boggle board at 
-//	//the given 0 - based row and column.If the row and /or column are out 
-//	//of bounds, throw an exception.
+//Boggle(string lexicon, string boardText);
+
+
 //char getLetter(int row, int col);
 
 //	//This method checks whether the given word string is suitable to search 
@@ -79,7 +75,7 @@ bool humanWordSearch(string word);
 //	//of text. It should print the board text in all uppercase.
 //	ostream& operator<< (ostream& stream);
 
-//bool exist(char board[4][4], string word);
+bool exist(char board[4][4], string word);
 };
 
 #endif

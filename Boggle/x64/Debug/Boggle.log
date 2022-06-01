@@ -1,5 +1,3 @@
 ﻿  Boggle.cpp
 C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(42,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Logan\Documents\GitHub\Boggle\Boggle\Boggle.cpp(120,2): error C3861: 'exist': identifier not found
-  Main.cpp
-  Generating Code...
+  Boggle.vcxproj -> C:\Users\Logan\Documents\GitHub\Boggle\x64\Debug\Boggle.exe

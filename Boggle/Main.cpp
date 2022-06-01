@@ -10,7 +10,7 @@ using namespace std;
 ///----This file will not exist. Main is the BoggleWords.cpp file (i think)----///////
 int main()
 {
-    string testString = "ABCD";
+    string testString = "AAGD";
     Boggle b1;
     //b1.getLetter(1, 1);
     
