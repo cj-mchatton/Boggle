@@ -10,7 +10,19 @@ using namespace std;
 ///----This file will not exist. Main is the BoggleWords.cpp file (i think)----///////
 int main()
 {
-    // as of right now I have a Boggle Ctor with no parameters, it creates a board.
+    string testString = "ABCD";
     Boggle b1;
+    //b1.getLetter(1, 1);
+    
+    
+    if (b1.humanWordSearch(testString) == true)
+    {
+        cout << "The board contains the word.";
+    }
+    else
+    {
+        cout << "The board does not contain the word.";
+    }
     return 0;
+
 }

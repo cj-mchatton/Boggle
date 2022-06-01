@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include "Boggle.h"
 
 using std::string;
@@ -16,10 +17,6 @@ Boggle::Boggle()
     string inString;
     fstream inFile;
     inFile.open("boggle.txt", ios::in);
-
-    //int numberOfWords = 1;
-    //string storedLexicon[83000];
-
     if (inFile.is_open())
     {
         int i = 0;
@@ -31,11 +28,9 @@ Boggle::Boggle()
         }
         inFile.close();
     }
-    //cout << storedLexicon << endl; //testing
 
     ///----Section Two: ------///
-    //this is given in the boggle document, when making 
-    //a new board this is used to choose one letter randomly from each group of 6
+    //this is used to choose one letter randomly from each group of 6
     char lettersToPickFrom[16][7] = {
         "AAEEGN", "ABBJOO", "ACHOPS", "AFFKPS",
         "AOOTTW", "CIMOTU", "DEILRX", "DELRVY",
@@ -43,35 +38,48 @@ Boggle::Boggle()
         "EIOSST", "ELRTTY", "HIMNQU", "HLNNRZ"
     };
 
-    string BoggleBoard[16]; //changed to a string from char.
+    char BoggleBoard[4][4]; //changed to a string from char.
     srand(time(0));
 
-    ///----Section Three: Create a unique board if one isnt given ------///
     //check string boardText for length. boardText will be a give parameter, 
     //if (boardText.length() != 16)
     //{
     //    cout << "error";
     //}
 
+    ///--This code temporarily commented out to test a static board below.--///
     // creating a unique boggle board from the available letters to play on
-    for (int i = 0; i < 16; i++){
-        BoggleBoard[i] = lettersToPickFrom[i][rand() % 6];}
+    /*for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            BoggleBoard[i][j] = lettersToPickFrom[i][rand() % 6];
+        }
+    }*/
 
-    //print out the boggle board here
-    for (int i = 0; i < 16; i++) {
-        cout << BoggleBoard[i];
-        i++;
-        cout << BoggleBoard[i];
-        i++;
-        cout << BoggleBoard[i];
-        i++;
-        cout << BoggleBoard[i] << "\n";
+    //testing only, delete:
+    char lettersToPickFrom2[16][2] = {
+        "A", "A", "A", "A",
+        "A", "C", "D", "D",
+        "D", "E", "E", "E",
+        "E", "E", "I", "H"
+    };
+
+    ///--set up static board for testing--///
+    // creating a unique boggle board from the available letters to play on
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            BoggleBoard[i][j] = lettersToPickFrom2[1][1];
+        }
     }
 
+    //print out the boggle board here
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            cout << BoggleBoard[i][j] << endl << endl ;
+        }
+    }
 
     ////store the new boggle board in our boggle class.
     //uniqueBoggleBoard = BoggleBoard;
-    
     string lexiconWordDictionary;
 }
 
@@ -87,13 +95,15 @@ Boggle::Boggle()
 //str1.replace(start, length, str2);
 //https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/handouts/08-C++-Strings.pdf
 
-//logan
-//char Boggle:: b.getLetter(int row, int col)
+
+//char Boggle:: getLetter(int row, int col)
 //{
+//    cout << uniqueBoggleBoard[row][col];
+//    return uniqueBoggleBoard[row][col];
 //}
 
 //cameron
-//bool Boggle:: b.checkWord(string word)
+//bool Boggle:: checkWord(string word)
 //{
 // //check word:
 // 
@@ -104,94 +114,82 @@ Boggle::Boggle()
 //}
 
 
-//logan
-//bool Boggle:: b.humanWordSearch(string word)
-//{
-//if word exists...
-//score = str.length - 4
-// 
-// 
-// 
-// 
-//}
+//Logan
+bool Boggle:: humanWordSearch(string word)
+{
+ exist(uniqueBoggleBoard, word);
+ //update score here 
+ //1 point for 5 letter word, 2 points for 6 letters etc.
+ //score = str.length - 4;
+}
 
-//cameron
-//string* Boggle:: b.computerWordSearch()
+//Cameron
+//string* Boggle:: computerWordSearch()
 //{
 //}
 
-//logan
-//int Boggle:: b.getScoreHuman()
+//Cameron
+//int Boggle:: getScoreHuman()
 //{
 //}
 
-//cameron
-//int b.getScoreComputer()
+//Cameron
+//int getScoreComputer()
 //{
 //}
 
-//cameron
+//Cameron
 //ostream& operator<< (ostream& stream)
 //{
-//}
-
-///This is the code to print out a formatted boggle board.
-//for (int i = 0; i < 16; i++) {
-//    cout << BoggleBoard[i];
-//    i++;
-//    cout << BoggleBoard[i];
-//    i++;
-//    cout << BoggleBoard[i];
-//    i++;
-//    cout << BoggleBoard[i] << "\n";
-//}
-
-
 
 ///---------This is for recursive search---------///
-//bool exist(vector<vector<char>>& board, string word) {
-//    if (word.empty() or board.empty())
-//        return false;
-//    bool foundMatch = false;
-//
-//    for (int i = 0; i < board.size(); i++)
-//        for (int j = 0; j < board[0].size(); j++)
-//        {
-//            if (board[i][j] == s[0]) // hit first letter
-//                searchWord(word, {}, board, 0, i, j, foundMatch);
-//
-//            if (foundMatch)
-//                return foundMatch;
-//        }
-//    return foundMatch;
-//}
-//
-//void searchWord(const string& word,
-//    string currentWord,
-//    vector<vector<char>>& board,
-//    int index,
-//    int i,
-//    int j,
-//    bool& foundMatch)
-//{
-//    if (currentWord.size() == word.size())
-//    {
-//        foundMatch = true;
-//        return;
-//    }
-//
-//    if (i < 0 or y < 0 or i >= board.size() or j >= board[0].size() or 
-//        board[i][j] != word[index] or foundMatch)
-//        return;
-//
-//    currentWord += word[index];
-//    char temp = board[i][j];
-//    board[i][j] = ' ';
-//    
-//    searchWord(word, currentWord, board, index+1, i+1, j, foundMatch);
-//    searchWord(word, currentWord, board, index+1, i-1, j, foundMatch);
-//    searchWord(word, currentWord, board, index+1, i, j+1, foundMatch);
-//    searchWord(word, currentWord, board, index+1, i, j-1, foundMatch);
-//
-//    board[i][j] = temp;
-//}
+//helper function
+void searchWord(const string& word,
+    string currentWord,
+    char board[][4],
+    int index,
+    int i,
+    int j,
+    bool& foundMatch)
+{
+    if (currentWord.size() == word.size())
+    {
+        foundMatch = true;
+        return;
+    }
+
+    if (i < 0 or j < 0 or i >= 4 or j >= 4 or
+        board[i][j] != word[index] or foundMatch)
+        return;
+
+    currentWord += word[index];
+    char temp = board[i][j];
+    board[i][j] = ' ';
+
+    searchWord(word, currentWord, board, index + 1, i + 1, j, foundMatch);
+    searchWord(word, currentWord, board, index + 1, i - 1, j, foundMatch);
+    searchWord(word, currentWord, board, index + 1, i, j + 1, foundMatch);
+    searchWord(word, currentWord, board, index + 1, i, j - 1, foundMatch);
+
+    board[i][j] = temp;
+}
+
+//recursive search, used in humanWordSearch and computerWordSearch
+bool exist(char board[4][4], string word) {
+    // I can have a class method to ensure that the board has been initialized
+    if (word.empty()) //or uniqueBoggleBoard.empty())
+        return false;
+    bool foundMatch = false;
+
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 4; j++)
+        {
+            if (board[i][j] == word[0]) // hit first letter
+                searchWord(word, {}, board, 0, i, j, foundMatch);
+
+            if (foundMatch)
+                return foundMatch;
+        }
+    return foundMatch;
+}
+
