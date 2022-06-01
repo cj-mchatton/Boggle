@@ -87,6 +87,18 @@ public:
 //	//of text. It should print the board text in all uppercase.
 //	ostream& operator<< (ostream& stream);
 //
+
+///these are added helper functions to use in the human and computer word search functions.
+//bool exist(vector<vector<char>>& board, string word);//error?
+
+//void searchWord(const string& word,
+//	string currentWord,
+//	vector<vector<char>>& board, //error?
+//	int index,
+//	int i,
+//	int j,
+//	bool& foundMatch);
+
 };
 
 #endif

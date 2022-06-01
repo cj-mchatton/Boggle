@@ -148,7 +148,7 @@ Boggle::Boggle()
 
 
 
-///---------THis is for recursive search---------///
+///---------This is for recursive search---------///
 //bool exist(vector<vector<char>>& board, string word) {
 //    if (word.empty() or board.empty())
 //        return false;
