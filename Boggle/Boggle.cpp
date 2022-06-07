@@ -72,7 +72,7 @@ Boggle::Boggle()
 
 //--------This is just some reminders for how to work with strings----------//
 //Accessing individual characters. Using square brackets, you can access individual
-//characters within a string as if it’s a char array.Positions within a string str are
+//characters within a string as if itï¿½s a char array.Positions within a string str are
 //numbered from 0 through str.length() - 1. You can read and write to characters
 //within a string using[].
 //str.substr(start, length);
@@ -112,24 +112,32 @@ bool Boggle:: humanWordSearch(string word)
 }
 
 //Cameron
-//string* Boggle:: computerWordSearch()
-//{
-//}
+// calculates all possible words
+string* Boggle:: computerWordSearch()
+{
+}
 
 //Cameron
-//int Boggle:: getScoreHuman()
-//{
-// return humanScore
-//}
+// returns the human's score
+int Boggle:: getScoreHuman()
+{
+    return humanScore;
+}
 
 //Cameron
-//int getScoreComputer()
-//{
-//}
+// returns the computer's score
+int Boggle:: getScoreComputer()
+{
+    return computerScore;
+}
 
 //Cameron
-//ostream& operator<< (ostream& stream)
-//{}
+// prints boggle board to the console
+ostream &Boggle::operator<< (ostream& stream)
+{
+    stream << uniqueBoggleBoard;
+    return stream;
+}
 
 ///---------This is for recursive search---------///
 //helper function
@@ -181,4 +189,3 @@ bool Boggle::exist(char board[4][4], string word) {
         }
     return foundMatch;
 }
-

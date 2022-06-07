@@ -20,8 +20,8 @@ class Boggle
 
 	string* storedLexicon = new string[83000];
 
-	int score = 0 ;	//human score 
-	//int score = 0; computerscore
+	int humanScore = 0 ;	//human score 
+	int computerScore = 0; //computerscore
 
 public:
 
@@ -55,27 +55,27 @@ bool humanWordSearch(string word);
 //	//code should be implemented separately from humanWordSearch.
 //	//The words in this set should be all uppercase.
 //	//This is the search that you will time chrono.
-//	string* computerWordSearch();
+string* computerWordSearch();
 //
 //	//This method returns the total number of points the human player 
 //	//has scored in the game so far as an integer.This total is 
 //	//0 when the game begins, but whenever a successful human word 
 //	//search is performed, points for that word are added to the 
 //	//human's total score.
-//	int getScoreHuman();
+int getScoreHuman();
 //
 //	//This method returns the total number of points the computer
 //	//player has scored in the game as an integer.This total is 
 //	//initially 0 when the game begins, but after a computer 
 //	//word search is performed, all points for those words 
 //	//are added to the computer's total score.
-//	int getScoreComputer();
+int getScoreComputer();
 //
 //	//This method prints a Boggle object to the console. 
 //	//The operator should print only the 4x4 grid of 
 //	//characters representing the board as four lines 
 //	//of text. It should print the board text in all uppercase.
-//	ostream& operator<< (ostream& stream);
+ostream& operator<< (ostream& stream);
 
 bool exist(char board[4][4], string word);
 };
