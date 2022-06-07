@@ -23,7 +23,7 @@ Boggle::Boggle()
         while (getline(inFile, inString))
         { 
             //cout << inString << endl;
-            storedLexicon[i] = inString;
+            storedLexicon[i] = inString; // store whole lexicon line by line
             i++;
         }
         inFile.close();

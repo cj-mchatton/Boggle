@@ -23,9 +23,10 @@ class Boggle
 	int score = 0 ;
 
 public:
-	Boggle();
 
-	~Boggle() 
+	Boggle(); //Default C-tor
+
+	~Boggle() //Deconstructor
 	{
 		delete[] storedLexicon;
 	}
@@ -43,7 +44,7 @@ public:
 //	//is passed in upper, lower, or mixed case.
 //	bool checkWord(string word);
 
-bool humanWordSearch(string word);
+bool humanWordSearch(string word); 
 
 //	//This method performs a search on the board for all words that can 
 //	//be formed(that have not already been found by the human player) 
