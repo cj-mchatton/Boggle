@@ -67,6 +67,7 @@ Boggle::Boggle()
     string lexiconWordDictionary;
 }
 
+//cameron
 //Boggle::Boggle(string lexicon, string boardText) {}
 
 //--------This is just some reminders for how to work with strings----------//
@@ -79,10 +80,10 @@ Boggle::Boggle()
 //str1.replace(start, length, str2);
 //https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1132/handouts/08-C++-Strings.pdf
 
-
+//cameron
 //char Boggle::getLetter(int row, int col)
 //{
-//    cout << uniqueBoggleBoard[row][col];
+//    //cout << uniqueBoggleBoard[row][col];
 //    return uniqueBoggleBoard[row][col];
 //}
 
@@ -107,6 +108,7 @@ bool Boggle:: humanWordSearch(string word)
  //1 point for 5 letter word, 2 points for 6 letters etc.
  //score = str.length - 4;
     //return true;
+    
 }
 
 //Cameron
@@ -117,6 +119,7 @@ bool Boggle:: humanWordSearch(string word)
 //Cameron
 //int Boggle:: getScoreHuman()
 //{
+// return humanScore
 //}
 
 //Cameron
@@ -126,7 +129,7 @@ bool Boggle:: humanWordSearch(string word)
 
 //Cameron
 //ostream& operator<< (ostream& stream)
-//{
+//{}
 
 ///---------This is for recursive search---------///
 //helper function

@@ -20,7 +20,8 @@ class Boggle
 
 	string* storedLexicon = new string[83000];
 
-	int score = 0 ;
+	int score = 0 ;	//human score 
+	//int score = 0; computerscore
 
 public:
 
